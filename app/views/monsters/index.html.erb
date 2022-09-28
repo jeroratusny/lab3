@@ -1,1 +1,17 @@
-<%# Update me %><%= @monsters.inspect %>
+<h1>Tabla de monstruos</h1>
+    <table class="table">
+    
+
+    <h1>Lista de tweets</h1>
+    <tr>
+        <th>Nombre</th>    
+        <th>Descripcion</th>   
+     </tr>
+
+<% @monsters.each do |monster| %>
+    <tr>
+        <td><%= link_to monster.name, monster %>   </td> <td><%= monster.description %></td>
+    </tr>
+<% end %>
+
+</table>
