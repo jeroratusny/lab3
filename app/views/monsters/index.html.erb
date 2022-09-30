@@ -1,3 +1,5 @@
+
+
 <h1>Tabla de monstruos</h1>
     <table class="table">
     
@@ -10,7 +12,13 @@
 
 <% @monsters.each do |monster| %>
     <tr>
-        <td><%= link_to monster.name, monster %>   </td> <td><%= monster.description %></td>
+        <td><%= link_to monster.name, monster %>   </td> 
+        <td> 
+        <% if monster.tweets.count > 1 %>
+            <div class="twittero"> Twittero Destacado </div>
+        <% end %>
+       <%= monster.description %> 
+       </td>
     </tr>
 <% end %>
 

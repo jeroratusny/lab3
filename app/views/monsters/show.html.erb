@@ -1,1 +1,33 @@
-<%= set_page_title (@monster.name) %>
+<%= set_page_title(@monster.name) %>
+
+<h2> <%= @monster.name %> </h2> 
+
+<p>  <%= @monster.description %>  </p>
+
+<button class="button"> Eliminar monstruo </button>
+
+<div class="button">  <% link_to @monster.name, "" %> </div>
+
+
+  <table class="table">
+  
+
+  <h1>Lista de tweets</h1>
+  <tr>
+      <th>Nombre</th>    
+      <th>Descripcion</th>   
+   </tr>
+
+<% @monster.tweets.each do |monster| %>
+  <tr>
+      <td><%= link_to monster.name, monster %>   </td> 
+      <td> 
+      <% if monster.tweets.count > 1 %>
+          <div class="twittero"> Twittero Destacado </div>
+      <% end %>
+     <%= monster.description %> 
+     </td>
+  </tr>
+<% end %>
+
+</table>
