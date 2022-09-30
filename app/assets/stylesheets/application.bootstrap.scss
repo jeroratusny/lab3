@@ -2,7 +2,8 @@
 @import 'bootstrap-icons/font/bootstrap-icons';
 
 .twittero{
-    color: red
+    color: red;
+    font-weight:bold;
   }
 
   .button{
@@ -13,3 +14,6 @@
     text-align: center;
     margin: auto;
   } 
+  div.row {
+    border: 1px solid;
+  }

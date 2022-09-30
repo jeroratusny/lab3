@@ -9,25 +9,28 @@
 <div class="button">  <% link_to @monster.name, "" %> </div>
 
 
-  <table class="table">
-  
+<h1>Lista de tweets</h1>
 
-  <h1>Lista de tweets</h1>
-  <tr>
-      <th>Nombre</th>    
-      <th>Descripcion</th>   
-   </tr>
 
-<% @monster.tweets.each do |monster| %>
-  <tr>
-      <td><%= link_to monster.name, monster %>   </td> 
-      <td> 
-      <% if monster.tweets.count > 1 %>
-          <div class="twittero"> Twittero Destacado </div>
-      <% end %>
-     <%= monster.description %> 
-     </td>
-  </tr>
-<% end %>
-
-</table>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+     <b> Description </b>
+    </div>
+    <div class="col-sm">
+    <b>  Tweets </b>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-sm">
+    <%= @monster.description %>
+  </div>
+  <div class="col-sm">
+  <% @monster.tweets.each do |tweet| %>
+    <div class="row">
+        <td> <%= tweet.content %> </td>
+    </div>
+  <% end %>
+  </div>
+</div>
+</div>
